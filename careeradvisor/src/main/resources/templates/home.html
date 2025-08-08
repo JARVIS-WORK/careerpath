@@ -1,0 +1,290 @@
+<!Doctype html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,intial-scale=1.0">
+        <title>CareerPath | find your future </title>
+        <link> rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css}"
+        <link> rel="stylesheet" th:href="@{/css/home.css}">
+
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <nav class="navbar">
+                    <a th:href="@{/}" class="logo">
+                        <i class ="fas fa-route "></i>
+                        careerPath
+                    </a>
+                    <div class="nav-links">
+                        <a th:href="@{/}" class="active">Home</a>
+                        <a th:href="@{#quiz}">Quiz</a>
+                        <a th:href="@{#chat}">chat</a>
+                        <a th:href="@{#resources}">Resources</a>
+                        <a th:href="@{results}">Results</a>
+                    </div>>
+                    <div class="auth-buttons">
+                        <a th:href="@{/login}" class="btn btn-outline">Log in</a>
+                        <a th:href="@{/signup}" class="btn btn-primary">Sign Up</a>
+
+                    </div>
+
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!--Hero section-->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-section">
+                    <h1> Discover your <span>Perfect Career </span> Path</h1>
+                           <p>Take our intelligent assessment, chat with career advisors, and explore resources to find your ideal future career. Designed specifically for students.</p>
+                    <div class="hero-buttons">
+                <a th:href="@{#quiz}" class="btn btn-primary">
+                    <i class="fas fa-play"></i> Start Quiz
+                </a>
+                <a th:href="@{#resources}" class="btn btn-outline">
+                    <i class="fas fa-book-open"></i> Explore Resources
+                </a>
+            </div>
+                </div>
+            </div>
+        </section>
+        <!-- Features Section -->
+<section class="section">
+    <div class="hero-image">
+        <div class="hero-img" style="background: linear-gradient(135deg, #4361ee, #4cc9f0); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold;">
+            Career Discovery Journey
+        </div>
+    </div>
+    <div class="container">
+        <div class="section-title">
+            <h2>How CareerPath Helps You</h2>
+            <p>Our comprehensive approach guides you through every step of your career discovery journey</p>
+        </div>
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-clipboard-question"></i></div>
+                <h3>Personalized Quiz</h3>
+                <p>Our intelligent assessment analyzes your skills, interests, and personality to recommend suitable career paths.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-comments"></i></div>
+                <h3>Expert Chat</h3>
+                <p>Connect with career advisors and professionals in your field of interest for personalized guidance.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-book"></i></div>
+                <h3>Learning Resources</h3>
+                <p>Access curated articles, courses, and roadmaps to develop skills for your chosen career path.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Quiz Section -->
+<section id="quiz" class="section" style="background: #f0f5ff;">
+    <div class="container">
+        <div class="section-title">
+            <h2>Career Discovery Quiz</h2>
+            <p>Answer a few questions to uncover careers that match your personality and interests</p>
+        </div>
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <h3>Question 3 of 10</h3>
+                <div class="progress-container"><div class="progress-bar"></div></div>
+            </div>
+            <div class="quiz-content">
+                <h3>Which of these activities do you enjoy the most?</h3>
+                <div class="options">
+                    <div class="option"><i class="far fa-circle"></i><span>Solving complex problems</span></div>
+                    <div class="option selected"><i class="fas fa-check-circle"></i><span>Creating art or designing things</span></div>
+                    <div class="option"><i class="far fa-circle"></i><span>Helping and teaching others</span></div>
+                    <div class="option"><i class="far fa-circle"></i><span>Analyzing data and numbers</span></div>
+                </div>
+            </div>
+            <div class="quiz-actions">
+                <button class="btn btn-outline"><i class="fas fa-arrow-left"></i> Previous</button>
+                <button class="btn btn-primary">Next <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Chat Section -->
+<section id="chat" class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Career Advisor Chat</h2>
+            <p>Get personalized guidance from our career experts and AI assistant</p>
+        </div>
+        <div class="chat-container">
+            <div class="chat-header">
+                <i class="fas fa-robot"></i>
+                <h3>CareerPath Advisor</h3>
+            </div>
+            <div class="chat-messages">
+                <div class="message bot">Hi there! I'm your CareerPath advisor. How can I help you with your career journey today?</div>
+                <div class="message user">I'm interested in tech careers but not sure where to start.</div>
+                <div class="message bot">Great! Tech offers many paths. Are you more interested in creating things (like apps/websites) or solving technical problems?</div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Type your message here...">
+                <button class="btn btn-primary btn-sm"><i class="fas fa-paper-plane"></i> Send</button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Results Section -->
+<section id="results" class="section" style="background: #f0f5ff;">
+    <div class="container">
+        <div class="section-title">
+            <h2>Your Career Matches</h2>
+            <p>Based on your quiz responses and interests, here are our top recommendations</p>
+        </div>
+        <div class="result-container">
+            <div class="result-icon"><i class="fas fa-chart-line"></i></div>
+            <h2>Your Career Personality: Creative Problem Solver</h2>
+            <p>You thrive in environments where you can innovate and find unique solutions to challenges.</p>
+            <div class="career-list">
+                <div class="career-card">
+                    <h4>UX Designer</h4>
+                    <p>Create meaningful digital experiences by designing user interfaces and interactions.</p>
+                </div>
+                <div class="career-card">
+                    <h4>Data Scientist</h4>
+                    <p>Extract insights from complex data to drive business decisions and innovation.</p>
+                </div>
+                <div class="career-card">
+                    <h4>Product Manager</h4>
+                    <p>Lead product development from concept to launch, balancing business and user needs.</p>
+                </div>
+            </div>
+            <button class="btn btn-primary"><i class="fas fa-download"></i> Download Full Report</button>
+        </div>
+    </div>
+</section>
+<!-- Results Section -->
+<section id="results" class="section" style="background: #f0f5ff;">
+    <div class="container">
+        <div class="section-title">
+            <h2>Your Career Matches</h2>
+            <p>Based on your quiz responses and interests, here are our top recommendations</p>
+        </div>
+        <div class="result-container">
+            <div class="result-icon"><i class="fas fa-chart-line"></i></div>
+            <h2>Your Career Personality: Creative Problem Solver</h2>
+            <p>You thrive in environments where you can innovate and find unique solutions to challenges.</p>
+            <div class="career-list">
+                <div class="career-card">
+                    <h4>UX Designer</h4>
+                    <p>Create meaningful digital experiences by designing user interfaces and interactions.</p>
+                </div>
+                <div class="career-card">
+                    <h4>Data Scientist</h4>
+                    <p>Extract insights from complex data to drive business decisions and innovation.</p>
+                </div>
+                <div class="career-card">
+                    <h4>Product Manager</h4>
+                    <p>Lead product development from concept to launch, balancing business and user needs.</p>
+                </div>
+            </div>
+            <button class="btn btn-primary"><i class="fas fa-download"></i> Download Full Report</button>
+        </div>
+    </div>
+</section>
+
+<!-- Resources Section -->
+<section id="resources" class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Career Development Resources</h2>
+            <p>Explore learning materials to develop skills for your chosen career path</p>
+        </div>
+        <div class="resources-grid">
+            <div class="resource-card">
+                <div class="resource-img"><i class="fas fa-laptop-code" style="font-size: 3rem;"></i></div>
+                <div class="resource-content">
+                    <h3>Introduction to UX Design</h3>
+                    <p>Learn the fundamentals of user experience design.</p>
+                    <div class="resource-meta">
+                        <span><i class="far fa-clock"></i> 8h Course</span>
+                        <span><i class="fas fa-star"></i> 4.8 (120)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="resource-card">
+                <div class="resource-img"><i class="fas fa-chart-bar" style="font-size: 3rem;"></i></div>
+                <div class="resource-content">
+                    <h3>Data Science Fundamentals</h3>
+                    <p>Master essential skills for data analysis, visualization, and machine learning.</p>
+                    <div class="resource-meta">
+                        <span><i class="far fa-clock"></i> 12h Course</span>
+                        <span><i class="fas fa-star"></i> 4.7 (95)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="resource-card">
+                <div class="resource-img"><i class="fas fa-bullseye" style="font-size: 3rem;"></i></div>
+                <div class="resource-content">
+                    <h3>Product Management Roadmap</h3>
+                    <p>Comprehensive guide to becoming a product manager with real-world case studies.</p>
+                    <div class="resource-meta">
+                        <span><i class="far fa-file-alt"></i> E-book</span>
+                        <span><i class="fas fa-star"></i> 4.9 (78)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>CareerPath</h3>
+                <p>Helping students discover their ideal career paths.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a th:href="@{/}">Home</a></li>
+                    <li><a th:href="@{#quiz}">Career Quiz</a></li>
+                    <li><a th:href="@{#chat}">Advisor Chat</a></li>
+                    <li><a th:href="@{#resources}">Resources</a></li>
+                    <li><a th:href="@{#results}">My Results</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Career Guides</a></li>
+                    <li><a href="#">Skill Development</a></li>
+                    <li><a href="#">Industry Insights</a></li>
+                    <li><a href="#">Resume Builder</a></li>
+                    <li><a href="#">Interview Prep</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> contact@careerpath.com</li>
+                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-map-marker-alt"></i> San Francisco, CA</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 CareerPath. All rights reserved.
+        </div>
+    </div>
+</footer>
+<script th:src="@{/js/home.js}"></script>
+
+    </body>
+    </html>
